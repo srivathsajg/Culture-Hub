@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Incredible India - Tourism</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-logo">CULTURE HUB</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#Home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="register.html" id="registerLink">Register</a></li>
+      <li><a href="login.html" id="loginLink">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header with Background Slideshow -->
+  <div class="image-container">
+    <header class="animate__animated animate__fadeInDown">
+      <h1>INDIA:LAND OF TOURISM</h1>
+      <p>Explore the beauty, culture, and history of Indian destinations</p>
+    </header>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="auth-check.js"></script>
+  <script type="module" src="script.js"></script>
+  <script>
+    // Check if user is logged in and update navigation accordingly
+    document.addEventListener("DOMContentLoaded", () => {
+      const isLoggedIn = sessionStorage.getItem("isLoggedIn") === "true";
+      
+      if (isLoggedIn) {
+        // Update navigation for logged-in users
+        document.getElementById("navLinks").innerHTML = `
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="states.html">Explore States</a></li>
+          <li><a href="#" id="logoutLink">Logout</a></li>
+        `;
+        
+        // Add logout functionality
+        document.getElementById("logoutLink").addEventListener("click", (e) => {
+          e.preventDefault();
+          // Clear session storage
+          sessionStorage.removeItem("isLoggedIn");
+          sessionStorage.removeItem("userEmail");
+          // Refresh the page to update navigation
+          window.location.reload();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

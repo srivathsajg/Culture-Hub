@@ -1,0 +1,12 @@
+{
+    "Rajasthan": {
+      "image": "...",
+      "description": "...",
+      "places": ["Jaipur", "Jaisalmer"],
+      "food": ["Dal Baati Churma", "Ghevar"],
+      "festivals": ["Desert Festival", "Teej"],
+      "culture": "Rajasthan is known for its royal Rajput traditions, folk dances, and colorful attire.",
+      "video": "https://www.youtube.com/embed/VcgEeuYHU7I"
+    }
+  }
+  

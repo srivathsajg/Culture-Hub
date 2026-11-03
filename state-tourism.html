@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tourism Places - WanderIndia</title>
+  <link rel="stylesheet" href="styles.css" />
+<style>
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+  margin: 0;
+  padding: 0;
+}
+
+/* Add padding to the top of the container to prevent overlap with the navbar */
+.state-container {
+  padding-top: 100px; /* Increased padding to ensure the state name is clearly visible */
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.state-header {
+  position: sticky;
+  top: 80px; /* Sticky after navbar */
+   /* Match your gradient/light background */
+  padding: 20px 0;
+  z-index: 10;
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  margin-bottom: 40px; /* Adjusted margin to provide more space below the state name */
+}
+
+
+.state-header h1 {
+  font-size: 3rem; /* Increased font size for better visibility */
+  color: #333;
+  margin-bottom: 20px; /* Added margin to avoid cutting off state name */
+  text-transform: uppercase; /* Capitalize state name */
+  letter-spacing: 2px; /* Space out the letters slightly */
+}
+
+/* Make sure the places container is not overflowing */
+.places-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Flexible grid for responsive design */
+  gap: 15px;
+  padding-bottom: 20px; /* Prevent overflow at the bottom */
+}
+
+/* Styling for place cards */
+.place-card {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.place-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Lazy load and smooth transition for images */
+.place-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.place-info {
+  padding: 20px;
+}
+
+.place-info h2 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.place-info p {
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.wiki-link {
+  display: inline-block;
+  background-color: #ff6b6b;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.wiki-link:hover {
+  background-color: #ff4757;
+}
+
+/* Adjust the loading and error message containers */
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  padding: 50px;
+}
+
+.error-message {
+  text-align: center;
+  color: #ff4757;
+  padding: 20px;
+  background-color: rgba(255, 71, 87, 0.1);
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+/* Ensures the state info doesn't get cut off */
+.place-details {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.detail-section {
+  margin-bottom: 15px;
+}
+
+.detail-section h3 {
+  margin-bottom: 5px;
+  color: #ff6b6b;
+}
+
+.detail-section ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.back-button {
+  display: inline-block;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #555;
+}
+
+.place-image.lazy {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.place-image.loaded {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">BOOSTING CULTURE THROUGH TECH</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="home.html">States</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <div class="state-container">
+    <a href="home.html" class="back-button">← Back to States</a>
+    <div class="state-header">
+      <h1 id="stateName">Loading state information...</h1>
+    </div>
+    
+    <div id="placesContainer" class="places-container">
+      <div class="loading">Loading tourism places...</div>
+    </div>
+  </div>
+
+  <script type="module" src="state-places.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const stateName = urlParams.get('state');
+
+      if (!stateName) {
+        window.location.href = 'home.html';
+        return;
+      }
+
+      document.title = `${stateName} Tourism - WanderIndia`;
+      document.getElementById('stateName').textContent = stateName;
+      const placesContainer = document.getElementById('placesContainer');
+
+      try {
+        const placesData = await window.tourismUtils.getPlacesData();
+        const stateData = placesData[stateName];
+
+        if (!stateData) {
+          placesContainer.innerHTML = `
+            <div class="error-message">
+              <p>Sorry, we don't have tourism information for ${stateName} yet.</p>
+            </div>
+          `;
+          return;
+        }
+
+        placesContainer.innerHTML = '';
+
+        if (stateData.places && stateData.places.length > 0) {
+          for (const place of stateData.places) {
+            const placeElement = document.createElement('div');
+            placeElement.className = 'place-card';
+            placeElement.innerHTML = `
+              <div class="place-info">
+                <h2>${place}</h2>
+                <p>Loading information from Wikipedia...</p>
+              </div>
+            `;
+            placesContainer.appendChild(placeElement);
+
+            const wikiInfo = await window.tourismUtils.fetchWikipediaInfo(place, stateName);
+
+            if (wikiInfo.error) {
+              placeElement.innerHTML = `
+                <div class="place-info">
+                  <h2>${place}</h2>
+                  <p>No Wikipedia information available for this place.</p>
+                </div>
+              `;
+            } else {
+              placeElement.innerHTML = `
+                ${wikiInfo.image ? `<img src="${wikiInfo.image}" alt="${place}" class="place-image lazy">` : ''}
+                <div class="place-info">
+                  <h2>${place}</h2>
+                  <p>${wikiInfo.extract.substring(0, 200)}${wikiInfo.extract.length > 200 ? '...' : ''}</p>
+                  <a href="${wikiInfo.url}" target="_blank" class="wiki-link">Read more on Wikipedia</a>
+                </div>
+              `;
+              const img = placeElement.querySelector('.place-image');
+              img.onload = () => {
+                img.classList.add('loaded');
+              };
+            }
+          }
+        } else {
+          placesContainer.innerHTML = `
+            <div class="error-message">
+              <p>No tourism places found for ${stateName}.</p>
+            </div>
+          `;
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        placesContainer.innerHTML = `
+          <div class="error-message">
+            <p>An error occurred while loading tourism information. Please try again later.</p>
+          </div>
+        `;
+      }
+    });
+  </script>
+</body>
+</html>

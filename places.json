@@ -1,0 +1,137 @@
+{
+  "Rajasthan": {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Amber_Palace,_Jaipur,_Rajasthan.jpg",
+    "description": "Rajasthan, known as the 'Land of Kings,' is famous for its majestic palaces, ancient forts, vibrant culture, and the Thar Desert.",
+    "places": ["Jaipur", "Jaisalmer", "Udaipur", "Jodhpur", "Pushkar"],
+    "food": ["Dal Baati Churma", "Ghevar", "Laal Maas", "Pyaaz Kachori"],
+    "festivals": ["Desert Festival", "Teej", "Pushkar Camel Fair", "Gangaur"],
+    "culture": "Rajasthan is known for its royal Rajput traditions, folk dances like Ghoomar and Kalbeliya, colorful attire, and traditional music.",
+    "video": "https://www.youtube.com/embed/VcgEeuYHU7I"
+  },
+  "Kerala": {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Backwaters_in_Kerala,_India.jpg",
+    "description": "Kerala, known as 'God's Own Country,' is famous for its serene backwaters, pristine beaches, lush hill stations, and Ayurvedic treatments.",
+    "places": ["Alleppey", "Munnar", "Kochi", "Wayanad", "Kovalam"],
+    "food": ["Appam with Stew", "Kerala Fish Curry", "Puttu and Kadala Curry", "Sadhya"],
+    "festivals": ["Onam", "Vishu", "Thrissur Pooram", "Boat Races"],
+    "culture": "Kerala is known for its classical dance form Kathakali, martial art Kalaripayattu, boat races, and traditional temple festivals.",
+    "video": "https://www.youtube.com/embed/JlQ3uvp2M8U"
+  },
+  "Goa": {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/03/Palolem_Beach_Goa.JPG",
+    "description": "Goa is India's smallest state but one of the most popular tourist destinations, known for its beaches, nightlife, and Portuguese heritage.",
+    "places": ["Baga Beach", "Panjim", "Dudhsagar Falls", "Old Goa", "Anjuna Beach"],
+    "food": ["Fish Curry Rice", "Vindaloo", "Bebinca", "Feni"],
+    "festivals": ["Carnival", "Shigmo", "Sunburn Festival", "Goa Film Festival"],
+    "culture": "Goa has a unique blend of Indian and Portuguese cultures, visible in its architecture, cuisine, music, and festivals.",
+    "video": "https://www.youtube.com/embed/YHQDXzHJ2L4"
+  },
+  "Maharashtra": {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Gateway_of_India_at_night.jpg",
+    "description": "Maharashtra is a diverse state with metropolitan cities, hill stations, beaches, caves, and forts.",
+    "places": ["Mumbai", "Pune", "Aurangabad", "Lonavala", "Mahabaleshwar"],
+    "food": ["Vada Pav", "Puran Poli", "Misal Pav", "Modak"],
+    "festivals": ["Ganesh Chaturthi", "Diwali", "Gudi Padwa", "Janmashtami"],
+    "culture": "Maharashtra has a rich culture with Marathi literature, Lavani dance form, and numerous forts and temples representing its history.",
+    "video": "https://www.youtube.com/embed/JQ_4CXcbLJw"
+  },
+  "Gujarat": {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/37/Sabarmati_Riverfront,_Ahmedabad.jpg",
+    "description": "Gujarat offers vibrant culture, pristine beaches, wildlife sanctuaries, and the Great Rann of Kutch salt desert.",
+    "places": ["Ahmedabad", "Kutch", "Dwarka", "Gir Forest", "Somnath"],
+    "food": ["Dhokla", "Khandvi", "Thepla", "Fafda-Jalebi"],
+    "festivals": ["Navratri", "Uttarayan (Kite Festival)", "Rann Utsav", "Janmashtami"],
+    "culture": "Gujarat has a rich cultural heritage with colorful folk dances like Garba and Dandiya Raas, handloom textiles, and traditional music.",
+    "video": "https://www.youtube.com/embed/7APdGj2sIjY"
+  },
+  "Nagaland": {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Dzukou_Valley%2C_Nagaland%2C_India_%28cropped%29.jpg",
+    "description": "Nagaland, the 'Land of Festivals,' is known for its rich tribal culture, stunning landscapes, vibrant traditions, and the famous Hornbill Festival.",
+    "places": ["Kohima", "Dzukou Valley", "Khonoma Village", "Mon", "Dimapur"],
+    "food": ["Smoked Pork", "Axone (Fermented Soybean)", "Bamboo Shoot", "Galho"],
+    "festivals": ["Hornbill Festival", "Moatsu", "Sekrenyi", "Tuluni"],
+    "culture": "Nagaland is home to 16 major tribes, each with its own distinct culture, language, and traditions. The state is known for its vibrant tribal dances, handloom textiles, and unique music.",
+    "video": "https://www.youtube.com/embed/pfJJ-5Rd0_0"
+  },
+  "Andhra Pradesh": {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/48/Tirumala_090615.jpg",
+    "description": "Andhra Pradesh is known for its rich cultural heritage, beautiful beaches, temples, and delicious cuisine.",
+    "places": ["Tirupati", "Visakhapatnam", "Araku Valley", "Amaravati", "Rajamahendravaram"],
+    "food": ["Pesarattu", "Gongura Pickle", "Pulihora", "Hyderabadi Biryani"],
+    "festivals": ["Ugadi", "Makar Sankranti", "Brahmotsavam", "Bathukamma"],
+    "culture": "Andhra Pradesh has a rich cultural heritage with classical dance forms like Kuchipudi, traditional art forms, and numerous temples.",
+    "video": "https://www.youtube.com/embed/IpdNSZl8OU8"
+  },
+  "Assam": {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Brahmaputra_River_in_Assam.jpg",
+    "description": "Assam is known for its tea plantations, wildlife sanctuaries, and the mighty Brahmaputra River.",
+    "places": ["Kaziranga National Park", "Majuli Island", "Kamakhya Temple", "Guwahati", "Sivasagar"],
+    "food": ["Assam Tea", "Pitha", "Duck Meat Curry", "Khar"],
+    "festivals": ["Bihu", "Ambubachi Mela", "Baishagu", "Rongali Bihu"],
+    "culture": "Assam has a diverse cultural heritage with Bihu dance, Sattriya classical dance, silk weaving, and traditional festivals.",
+    "video": "https://www.youtube.com/embed/TBLjqTsq3CE"
+  },
+  "Tamil Nadu": {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/41/Meenakshi_Temple_Madurai_India.jpg",
+    "description": "Tamil Nadu is known for its ancient Dravidian culture, magnificent temples, classical arts, and beautiful beaches.",
+    "places": ["Chennai", "Madurai", "Ooty", "Kodaikanal", "Rameswaram"],
+    "food": ["Idli", "Dosa", "Pongal", "Chettinad Cuisine"],
+    "festivals": ["Pongal", "Natyanjali Dance Festival", "Arudra Darshan", "Karthigai Deepam"],
+    "culture": "Tamil Nadu has a rich cultural heritage with Bharatanatyam dance, Carnatic music, and magnificent temple architecture.",
+    "video": "https://www.youtube.com/embed/AusYJcjJtGE"
+  },
+  "West Bengal": {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/Howrah_Bridge_at_Twilight_Hours.jpg",
+    "description": "West Bengal is known for its rich literature, art, culture, and the Sundarbans mangrove forests.",
+    "places": ["Kolkata", "Darjeeling", "Sundarbans", "Siliguri", "Digha"],
+    "food": ["Rasgulla", "Sandesh", "Fish Curry", "Mishti Doi"],
+    "festivals": ["Durga Puja", "Poush Mela", "Saraswati Puja", "Kali Puja"],
+    "culture": "West Bengal has a rich cultural heritage with literature, poetry, music, cinema, and traditional arts.",
+    "video": "https://www.youtube.com/embed/tMnDrjzKxq8"
+  },
+  "Himachal Pradesh": {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a5/View_of_Kaza_Town.jpg",
+    "description": "Himachal Pradesh is known for its stunning mountain scenery, adventure sports, and hill stations.",
+    "places": ["Shimla", "Manali", "Dharamshala", "Dalhousie", "Spiti Valley"],
+    "food": ["Dham", "Madra", "Chana Madra", "Babru"],
+    "festivals": ["Kullu Dussehra", "Shivratri Fair", "Losar", "Minjar Fair"],
+    "culture": "Himachal Pradesh has a rich cultural heritage with folk dances, traditional crafts, ancient temples, and unique customs.",
+    "video": "https://www.youtube.com/embed/uILq4vgwRrg"
+  },
+  "Uttarakhand": {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/36/Nainital_lake_from_above.jpg",
+    "description": "Uttarakhand, often called the 'Land of Gods,' is known for its Himalayan mountains, pilgrimage sites, and adventure tourism.",
+    "places": ["Rishikesh", "Haridwar", "Nainital", "Mussoorie", "Kedarnath"],
+    "food": ["Aloo Ke Gutke", "Kafuli", "Bhatt ki Churkani", "Mandua ki Roti"],
+    "festivals": ["Kumbh Mela", "Nanda Devi Raj Jat", "Phool Dei", "Harela"],
+    "culture": "Uttarakhand has a rich cultural heritage with folk music, dances, colorful festivals, and sacred rituals.",
+    "video": "https://www.youtube.com/embed/KdxLZXZxHCk"
+  },
+  "Jammu and Kashmir": {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Shikara_in_Dal_Lake.jpg",
+    "description": "Jammu and Kashmir is known for its stunning landscapes, including the Kashmir Valley, Ladakh region, and sacred shrines.",
+    "places": ["Srinagar", "Gulmarg", "Pahalgam", "Sonamarg", "Vaishno Devi"],
+    "food": ["Rogan Josh", "Wazwan", "Dum Aloo", "Kahwa"],
+    "festivals": ["Tulip Festival", "Hemis Festival", "Shikara Festival", "Losar"],
+    "culture": "Jammu and Kashmir has a diverse cultural heritage with unique arts and crafts, such as Pashmina shawls, carpets, and papier-mâché.",
+    "video": "https://www.youtube.com/embed/8FfdQj6wZKw"
+  },
+  "Arunachal Pradesh": {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Tawang_Monastery_Arunachal_Pradesh.jpg",
+    "description": "Arunachal Pradesh, the 'Land of the Dawn-Lit Mountains,' is known for its pristine natural beauty, diverse tribal cultures, and Buddhist monasteries.",
+    "places": ["Tawang", "Ziro Valley", "Namdapha National Park", "Itanagar", "Bomdila"],
+    "food": ["Thukpa", "Momos", "Apong", "Bamboo Shoot Pickle"],
+    "festivals": ["Losar", "Ziro Music Festival", "Nyokum", "Solung"],
+    "culture": "Arunachal Pradesh is home to 26 major tribes and over 100 sub-tribes, each with its unique traditions, languages, and festivals.",
+    "video": "https://www.youtube.com/embed/zQnTG_GqJNo"
+  },
+  "Karnataka": {
+  "image": "https://upload.wikimedia.org/wikipedia/commons/0/05/Hampi_virupaksha_temple.jpg",
+  "description": "Karnataka, located in the southwestern region of India, is renowned for its rich history, architectural wonders, technology hubs, and diverse culture.",
+  "places": ["Hampi", "Mysore Palace", "Coorg", "Jog Falls", "Bengaluru"],
+  "food": ["Bisi Bele Bath", "Mysore Pak", "Ragi Mudde", "Dosa"],
+  "festivals": ["Dasara (Mysore Dasara)", "Karaga", "Ugadi", "Vara Mahalakshmi"],
+  "culture": "Karnataka has a rich cultural heritage that includes classical music (Carnatic), dance forms like Yakshagana, and a deep tradition of art and literature in Kannada.",
+  "video": "https://www.youtube.com/embed/LNOUZ1UqbXA"
+}
+}
